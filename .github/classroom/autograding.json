@@ -2,9 +2,7 @@
   "tests": [
     {
       "name": "Check 1.3",
-      "setup": "",
       "run": "cat answers/1.3.txt",
-      "input": "",
       "output": "docker run back-lab",
       "comparison": "exact",
       "timeout": 10,
