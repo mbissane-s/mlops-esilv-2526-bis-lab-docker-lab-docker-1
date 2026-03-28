@@ -1,1 +1,54 @@
-{}
+{
+  "tests": [
+    {
+      "name": "Check 1.3",
+      "setup": "",
+      "run": "cat answers/1.3.txt",
+      "input": "",
+      "output": "docker run back-lab",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check 1.4",
+      "run": "cat answers/1.4.txt",
+      "output": "docker run -p 5000:5000 back-lab",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check 1.5",
+      "run": "cat answers/1.5.txt",
+      "output": "docker run -p 5000:5000 -e CURRENT_ENVIRONMENT=DEV back-lab",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check 1.6",
+      "run": "cat answers/1.6.txt",
+      "output": "docker push mbissane/back-lab:latest",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check 1.7",
+      "run": "cat answers/1.7.txt",
+      "output": "docker rmi -f back-lab mbissane/back-lab",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check 1.8",
+      "run": "cat answers/1.8.txt",
+      "output": "docker run -d -p 5001:5000 -e CURRENT_ENVIRONMENT=DEV mbissane/back-lab:latest",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
