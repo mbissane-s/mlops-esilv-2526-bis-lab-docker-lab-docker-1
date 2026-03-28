@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  back:
+    build: ./back
+    ports:
+      - "8080:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=dev
+
+  front:
+    build: ./front
+    ports:
+      - "8081:80"
+    environment:
+      - WS_BACK_URL=http://back:5000
